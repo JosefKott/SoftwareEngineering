@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+intmain()
+{
+
+	const int high = 18, low = 17;
+
+	int level = 5;
+
+
+	do {
+		cout << "Please Enter your Age" << endl;
+		cin >> level;
+	} while ((level < 0) || (level > 18));
+}
+
+if (level < 18) {
+	cout << "You are not eligible to vote." << endl;
+
+}
+
+if (level >= 18)
+{
+	cout << "You are eligible to vote." << endl;
+
+}
+
+
