@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{	
+
+	int score = 5
+
+	do {
+		cout << "Please enter your score. (Between 0 and 100)" << endl;
+		cin >> level;
+	} while ((level < 0) || (level > 100));
+
+	if (score < 60)
+	{
+		cout << "Grade F" << endl;
+
+	}
+	else if (score >= 60)
+	{
+		cout << "Grade D" << endl;
+
+	}
+	else if (score >= 70)
+	{
+		cout << "Grade C" << endl;
+
+	}
+	else if (score >= 80)
+	{
+		cout << "Grade B" << endl;
+
+	}
+	else if (score >= 90)
+	{
+		cout << "Grade A" << endl;
+
+	}
+}
