@@ -1,0 +1,28 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    ofstream outFile("LabSixTask1.txt")
+    if (!outFile.is_open()) {
+        cerr << "Could not open file try again" << endl;
+        return 1;
+    }
+
+    int age = 18;
+    float height = 180;
+    string name = "Jeff";
+
+    outFile << left << setw(10) << "Nmae"
+    << setW (10) << "Age"
+    << setW (10) << "Height" << endl;
+    outFile << left << setw(10) << name
+    << setw(10) << age
+    << fixed << setprecision (2) << height << endl;
+
+    outFile.close();
+
+    return 0;
+
+}
