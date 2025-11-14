@@ -1,0 +1,32 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+int main() {
+    std::ifstream file("data.json");
+    std::string line;
+
+    if(file.is_open()) {
+        while (getline(file, line)) {
+            std::string name, grades, grade;
+            std::istringstream ss(line);
+            getline(ss, name, ',')
+            name = name.substr(name.find(":") + 3, name.length() - name.find(":") - 4);
+            std::cout << "Name: " << name;
+            getline(ss, grades, '}');
+            grades = grades.substr(grades.find(":") + 3, grades.length() - grades.find(":") - 4);
+            std::istringstream gradesStream(grades);
+            std::cout << ", Grades: "
+            while (getline(gradesStream, grade, ',')) {
+                std::cout << grade << "";
+
+            }
+            std::cout << std::endl;
+
+        }
+        file.close();
+    }
+    return 0;
+    
+}
