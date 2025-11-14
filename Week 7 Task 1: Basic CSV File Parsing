@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+
+int main() {
+    std::ifstream file("data.csv");
+    std::string line;
+
+    if (file.is_open()) {
+        while (getline(file, line)) {
+            std::istringstream ss(line);
+            std::string name, age, city;
+            getline(ss, name, ',');
+            getline(ss, age, ',');
+            getline(ss, city, ',');
+            std::cout << "Name: " << name << "Age: " << age << "City: " << city std::endl;
+        }
+        file.close();
+    } 
+    return 0;
+}
+
+
+// Requires a data.csv excel file with data of Names, Alice, Bob, Charlie   Age, 30, 25, 35    City, London, New York, Sydney
